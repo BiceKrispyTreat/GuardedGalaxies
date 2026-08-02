@@ -1,7 +1,25 @@
 {
     "type": "palladium:skin_overlay",
-    "textures": "guardedgalaxies:textures/models/tokon_pants.png",
-    "model_layers": "palladium:humanoid#suit",
+    "textures": {
+        "default": "guardedgalaxies:textures/models/tokon_pants.png",
+        "jacket": "guardedgalaxies:textures/models/tokon_jacket_wide.png"
+    },
+    "model_layers": {
+        "default": "palladium:humanoid#suit"
+    },
+    "conditions": [
+        {
+            "texture": "jacket",
+            "if": {
+                "type": "palladium:item_in_slot",
+                "item": {
+                    "item": "guardedgalaxies:starlord_jacket_tokon"
+                },
+                "slot": "chest"
+            }
+        }
+    ],
     "hide_second_layer": true,
+    "render_layers": "guardedgalaxies:starlord_pants_tokon",
     "priority": 1
 }

@@ -103,7 +103,7 @@
                     }
                 ],
                 "unlocking": [
-                     {
+                    {
                         "type": "palladium:and",
                         "conditions": [
                             {
@@ -233,22 +233,22 @@
             "ignore_player_movement": false,
             "conditions": {
                 "enabling": [
-                                        {
-                                            "type": "palladium:action",
-                                            "cooldown": 0,
-                                            "key_type": "key_bind",
-                                            "needs_empty_hand": false,
-                                            "allow_scrolling_when_crouching": true
-                                        }
+                    {
+                        "type": "palladium:action",
+                        "cooldown": 0,
+                        "key_type": "key_bind",
+                        "needs_empty_hand": false,
+                        "allow_scrolling_when_crouching": true
+                    }
                 ],
                 "unlocking": [
-                            {
-                                "type": "palladium:item_in_slot",
-                                "item": {
-                                    "item": "guardedgalaxies:starlord_jacket_tokon"
-                                },
-                                "slot": "chest"
-                            }
+                    {
+                        "type": "palladium:item_in_slot",
+                        "item": {
+                            "item": "guardedgalaxies:starlord_jacket_tokon"
+                        },
+                        "slot": "chest"
+                    }
                 ]
             }
         },
@@ -266,7 +266,7 @@
             "entity_data": {
                 "Damage": 4,
                 "Gravity": 0.03,
-                "CommandOnEntityHit": "execute positioned ~ ~ ~ run superpower add @e[limit=1] guardedgalaxies:constrained",
+                "CommandOnEntityHit": "execute positioned ~ ~ ~ as @e[distance=..1.7] run superpower add guardedgalaxies:constrained",
                 "Appearances": [
                     {
                         "Type": "item",
@@ -278,7 +278,6 @@
                         "Spread": 0.05
                     }
                 ]
-
             },
             "inaccuracy": 0,
             "velocity": 1.5,
@@ -287,22 +286,22 @@
             "ignore_player_movement": false,
             "conditions": {
                 "enabling": [
-                                        {
-                                            "type": "palladium:action",
-                                            "cooldown": 30,
-                                            "key_type": "key_bind",
-                                            "needs_empty_hand": false,
-                                            "allow_scrolling_when_crouching": true
-                                        }
+                    {
+                        "type": "palladium:action",
+                        "cooldown": 30,
+                        "key_type": "key_bind",
+                        "needs_empty_hand": false,
+                        "allow_scrolling_when_crouching": true
+                    }
                 ],
                 "unlocking": [
                     {
-                                "type": "palladium:item_in_slot",
-                                "item": {
-                                    "item": "guardedgalaxies:starlord_jacket_tokon"
-                                },
-                                "slot": "chest"
-                            }
+                        "type": "palladium:item_in_slot",
+                        "item": {
+                            "item": "guardedgalaxies:starlord_jacket_tokon"
+                        },
+                        "slot": "chest"
+                    }
                 ]
             }
         }
