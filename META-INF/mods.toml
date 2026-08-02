@@ -1,0 +1,21 @@
+modLoader="lowcodefml"
+showAsResourcePack = false
+loaderVersion="[47,)"
+license="All Rights Reserved"
+
+[[mods]]
+modId="guardedgalaxies"
+version="1.0.0"
+logoFile = "logo.png"
+logoBlur = false
+displayName="Guarded Galaxies"
+description='''
+Take to the stars, Form a rag-tag group, Save galaxies, and get rich!
+'''
+
+[[dependencies.guardedgalaxies]]
+modId = "palladium"
+mandatory = true
+versionRange = "[4.4.1,)"
+ordering = "NONE"
+side = "BOTH"

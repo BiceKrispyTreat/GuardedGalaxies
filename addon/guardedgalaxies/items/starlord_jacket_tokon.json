@@ -1,0 +1,6 @@
+{
+    "type": "palladium:armor",
+    "slot": "chest",
+    "creative_mode_tab": "minecraft:combat",
+    "armor_material": "minecraft:diamond"
+}

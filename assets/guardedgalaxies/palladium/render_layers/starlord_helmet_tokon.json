@@ -1,0 +1,6 @@
+{
+    "type": "palladium:skin_overlay",
+    "render_type": "solid",
+    "texture": "guardedgalaxies:textures/models/starlord_tokon.png",
+    "hide_second_layer": true
+}

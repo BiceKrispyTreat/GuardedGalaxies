@@ -1,0 +1,127 @@
+{
+    "name": "Constrained",
+    "persistent_data": true,
+    "background": "minecraft:textures/block/white_wool.png",
+    "icon": "minecraft:wither_skeleton_skull",
+    "gui_display_type": "tree",
+    "abilities": {
+        "ground_flyers": {
+            "type": "palladium:attribute_modifier",
+            "icon": "minecraft:iron_chestplate",
+            "title": "null",
+            "bar_color": "light_gray",
+            "hidden": false,
+            "hidden_in_bar": false,
+            "list_index": -1,
+            "gui_position": "null",
+            "description": "null",
+            "attribute": "palladium:flight_speed",
+            "amount": -5,
+            "operation": 0,
+            "uuid": "c326a104-3c50-4441-98a4-636cafbdf2a0",
+            "conditions": {
+                "enabling": [],
+                "unlocking": []
+            }
+        },
+        "ground_levitators": {
+            "type": "palladium:attribute_modifier",
+            "icon": "minecraft:iron_chestplate",
+            "title": "null",
+            "bar_color": "light_gray",
+            "hidden": false,
+            "hidden_in_bar": false,
+            "list_index": -5,
+            "gui_position": "null",
+            "description": "null",
+            "attribute": "palladium:levitation_speed",
+            "amount": -1,
+            "operation": 0,
+            "uuid": "64eabe4b-ba35-43ab-be75-dcd01cfe8993",
+            "conditions": {
+                "enabling": [],
+                "unlocking": []
+            }
+        },
+        "shocked_effect": {
+            "type": "palladium:render_layer",
+            "icon": "minecraft:blaze_rod",
+            "title": "null",
+            "bar_color": "light_gray",
+            "hidden": true,
+            "hidden_in_bar": true,
+            "list_index": -1,
+            "gui_position": "null",
+            "description": "null",
+            "render_layer": "guardedgalaxies:bola_hit",
+            "conditions": {
+                "enabling": [],
+                "unlocking": []
+            }
+        },
+        "halt_movement": {
+            "type": "palladium:command",
+            "icon": "minecraft:command_block",
+            "title": "null",
+            "bar_color": "light_gray",
+            "hidden": false,
+            "hidden_in_bar": false,
+            "list_index": -1,
+            "gui_position": "null",
+            "description": "null",
+            "first_tick_commands": [
+                "effect give @s minecraft:slowness 10 100 true"
+            ],
+            "last_tick_commands": [],
+            "commands": [],
+            "conditions": {
+                "enabling": [],
+                "unlocking": []
+            }
+        },
+        "shocking_visuals": {
+            "type": "palladium:vibrate",
+            "icon": "minecraft:blaze_rod",
+            "title": "null",
+            "bar_color": "light_gray",
+            "hidden": true,
+            "hidden_in_bar": true,
+            "list_index": -1,
+            "gui_position": "null",
+            "description": "null",
+            "intensity": 10,
+            "conditions": {
+                "enabling": [],
+                "unlocking": []
+            }
+        },
+        "take_power": {
+            "type": "palladium:command",
+            "icon": "minecraft:command_block",
+            "title": "null",
+            "bar_color": "light_gray",
+            "hidden": false,
+            "hidden_in_bar": false,
+            "list_index": -1,
+            "gui_position": "null",
+            "description": "null",
+            "first_tick_commands": [
+                "say Gotcha!"
+            ],
+            "last_tick_commands": [
+                "execute as @s superpower remove guardedgalaxies:constrained"
+            ],
+            "commands": [],
+            "conditions": {
+                "enabling": [
+                    {
+                        "type": "palladium:interval",
+                        "active_ticks": 200,
+                        "disabled_ticks": 20
+                    }
+                ],
+                "unlocking": []
+            }
+        }
+    }
+}

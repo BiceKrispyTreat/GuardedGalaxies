@@ -1,0 +1,310 @@
+{
+    "name": "Star-Lord",
+    "persistent_data": true,
+    "background": "minecraft:textures/block/red_wool.png",
+    "icon": "guardedgalaxies:textures/icons/ravagers_logo.png",
+    "gui_display_type": "tree",
+    "abilities": {
+        "placeholder": {
+            "type": "palladium:dummy",
+            "icon": "minecraft:blaze_rod",
+            "title": "Placeholder power",
+            "bar_color": "light_gray",
+            "hidden": false,
+            "hidden_in_bar": false,
+            "list_index": -1,
+            "gui_position": "null",
+            "description": "placeholder ability to bookmark powers",
+            "conditions": {
+                "enabling": [],
+                "unlocking": []
+            }
+        },
+        "jet_boot_flight": {
+            "type": "palladium:attribute_modifier",
+            "icon": "minecraft:iron_chestplate",
+            "title": "null",
+            "bar_color": "light_gray",
+            "hidden": true,
+            "hidden_in_bar": true,
+            "list_index": -1,
+            "gui_position": "null",
+            "description": "null",
+            "attribute": "palladium:flight_speed",
+            "amount": 0.5,
+            "operation": 0,
+            "uuid": "49d24088-3e07-4b9c-8383-041c9f04bffb",
+            "conditions": {
+                "enabling": [],
+                "unlocking": [
+                    {
+                        "type": "palladium:item_in_slot",
+                        "item": {
+                            "item": "guardedgalaxies:starlord_boots_tokon"
+                        },
+                        "slot": "feet"
+                    }
+                ]
+            }
+        },
+        "jet_boots_thrusters": {
+            "type": "palladium:render_layer",
+            "icon": "minecraft:blaze_rod",
+            "title": "null",
+            "bar_color": "light_gray",
+            "hidden": true,
+            "hidden_in_bar": true,
+            "list_index": -1,
+            "gui_position": "null",
+            "description": "null",
+            "render_layer": "guardedgalaxies:starlord_thrusters",
+            "conditions": {
+                "enabling": [
+                    {
+                        "type": "palladium:and",
+                        "conditions": [
+                            {
+                                "type": "palladium:ability_enabled",
+                                "power": "null",
+                                "ability": "jet_boot_flight"
+                            },
+                            {
+                                "type": "palladium:is_hovering_or_flying"
+                            }
+                        ]
+                    }
+                ],
+                "unlocking": []
+            }
+        },
+        "hostile_scan": {
+            "type": "palladium:entity_glow",
+            "icon": "minecraft:glow_berries",
+            "title": "null",
+            "bar_color": "light_gray",
+            "hidden": false,
+            "hidden_in_bar": false,
+            "list_index": -1,
+            "gui_position": "null",
+            "description": "null",
+            "mode": "others",
+            "color": "#EB0909",
+            "distance": 0,
+            "property_key": "null",
+            "property_value": "null",
+            "conditions": {
+                "enabling": [
+                    {
+                        "type": "palladium:toggle",
+                        "cooldown": 600,
+                        "key_type": "key_bind",
+                        "needs_empty_hand": false,
+                        "allow_scrolling_when_crouching": true
+                    }
+                ],
+                "unlocking": [
+                     {
+                        "type": "palladium:and",
+                        "conditions": [
+                            {
+                                "type": "palladium:not",
+                                "conditions": [
+                                    {
+                                        "type": "palladium:openable_item_progress",
+                                        "slot": "head",
+                                        "min": 0,
+                                        "max": 3
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "palladium:item_in_slot",
+                                "item": {
+                                    "item": "guardedgalaxies:starlord_helmet_tokon"
+                                },
+                                "slot": "head"
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        "no_fall_damage": {
+            "type": "palladium:damage_immunity",
+            "icon": "minecraft:potion",
+            "title": "null",
+            "bar_color": "light_gray",
+            "hidden": false,
+            "hidden_in_bar": false,
+            "list_index": -1,
+            "gui_position": "null",
+            "description": "null",
+            "damage_sources": [
+                "minecraft:is_fall"
+            ],
+            "conditions": {
+                "enabling": [],
+                "unlocking": [
+                    {
+                        "type": "palladium:item_in_slot",
+                        "item": {
+                            "item": "guardedgalaxies:starlord_boots_tokon"
+                        },
+                        "slot": "feet"
+                    }
+                ]
+            }
+        },
+        "space_walk_immunity": {
+            "type": "palladium:damage_immunity",
+            "icon": "minecraft:potion",
+            "title": "null",
+            "bar_color": "light_gray",
+            "hidden": true,
+            "hidden_in_bar": true,
+            "list_index": -1,
+            "gui_position": "null",
+            "description": "null",
+            "damage_sources": [
+                "minecraft:is_freezing",
+                "minecraft:is_drowning",
+                "guardedgalaxies:suffocation"
+            ],
+            "conditions": {
+                "enabling": [],
+                "unlocking": [
+                    {
+                        "type": "palladium:and",
+                        "conditions": [
+                            {
+                                "type": "palladium:not",
+                                "conditions": [
+                                    {
+                                        "type": "palladium:openable_item_progress",
+                                        "slot": "head",
+                                        "min": 0,
+                                        "max": 3
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "palladium:item_in_slot",
+                                "item": {
+                                    "item": "guardedgalaxies:starlord_helmet_tokon"
+                                },
+                                "slot": "head"
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        "throw_mine": {
+            "type": "palladium:projectile",
+            "icon": "minecraft:snowball",
+            "title": "null",
+            "bar_color": "light_gray",
+            "hidden": false,
+            "hidden_in_bar": false,
+            "list_index": -1,
+            "gui_position": "null",
+            "description": "null",
+            "entity_type": "palladium:custom_projectile",
+            "entity_data": {
+                "Damage": 0,
+                "Gravity": 0.08,
+                "Appearances": [
+                    {
+                        "Type": "item",
+                        "Item": "minecraft:nether_star"
+                    },
+                    {
+                        "Type": "particles",
+                        "ParticleType": "minecraft:end_rod",
+                        "Spread": 0.05
+                    }
+                ],
+                "CommandOnBlockHit": "setblock ~ ~ ~ minecraft:gravel"
+            },
+            "inaccuracy": 0,
+            "velocity": 1.5,
+            "swinging_arm": "main_arm",
+            "damage_from_player": false,
+            "ignore_player_movement": false,
+            "conditions": {
+                "enabling": [
+                                        {
+                                            "type": "palladium:action",
+                                            "cooldown": 0,
+                                            "key_type": "key_bind",
+                                            "needs_empty_hand": false,
+                                            "allow_scrolling_when_crouching": true
+                                        }
+                ],
+                "unlocking": [
+                            {
+                                "type": "palladium:item_in_slot",
+                                "item": {
+                                    "item": "guardedgalaxies:starlord_jacket_tokon"
+                                },
+                                "slot": "chest"
+                            }
+                ]
+            }
+        },
+        "electric_bola": {
+            "type": "palladium:projectile",
+            "icon": "minecraft:slime_ball",
+            "title": "null",
+            "bar_color": "light_gray",
+            "hidden": false,
+            "hidden_in_bar": false,
+            "list_index": -1,
+            "gui_position": "null",
+            "description": "null",
+            "entity_type": "palladium:custom_projectile",
+            "entity_data": {
+                "Damage": 4,
+                "Gravity": 0.03,
+                "CommandOnEntityHit": "execute positioned ~ ~ ~ run superpower add @e[limit=1] guardedgalaxies:constrained",
+                "Appearances": [
+                    {
+                        "Type": "item",
+                        "Item": "minecraft:slime_ball"
+                    },
+                    {
+                        "Type": "particles",
+                        "ParticleType": "wax_on",
+                        "Spread": 0.05
+                    }
+                ]
+
+            },
+            "inaccuracy": 0,
+            "velocity": 1.5,
+            "swinging_arm": "main_arm",
+            "damage_from_player": false,
+            "ignore_player_movement": false,
+            "conditions": {
+                "enabling": [
+                                        {
+                                            "type": "palladium:action",
+                                            "cooldown": 30,
+                                            "key_type": "key_bind",
+                                            "needs_empty_hand": false,
+                                            "allow_scrolling_when_crouching": true
+                                        }
+                ],
+                "unlocking": [
+                    {
+                                "type": "palladium:item_in_slot",
+                                "item": {
+                                    "item": "guardedgalaxies:starlord_jacket_tokon"
+                                },
+                                "slot": "chest"
+                            }
+                ]
+            }
+        }
+    }
+}

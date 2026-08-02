@@ -1,0 +1,13 @@
+{
+    "pack": {
+        "id": "guardedgalaxies",
+        "pack_format": 15,
+        "description": "Take to the stars, form a rag-tag group, save galaxies, and get rich!",
+        "version": "1.0.0"
+    },
+    "dependencies": {
+        "common": {},
+        "fabric": {},
+        "forge": {}
+    }
+}

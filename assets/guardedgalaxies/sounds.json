@@ -1,0 +1,8 @@
+{
+    "toggle_helmet": {
+        "category": "player",
+        "sounds": [
+            "guardedgalaxies:sounds/powers/starlord_helmet_toggle.ogg"
+        ]
+    }
+}

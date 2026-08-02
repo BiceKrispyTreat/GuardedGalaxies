@@ -1,0 +1,13 @@
+{
+    "schemaVersion": 1,
+    "authors": [
+        "BiceKrispyTreat"
+    ],
+    "environment": "*",
+    "id": "guardedgalaxies",
+    "version": "1.0.0",
+    "name": "Guarded Galaxies",
+    "description": "Take to the stars, form a rag-tag group, save galaxies, and get rich!",
+    "icon": "logo.png",
+    "license": "All rights reserved"
+}

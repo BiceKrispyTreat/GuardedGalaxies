@@ -1,0 +1,7 @@
+{
+    "type": "palladium:skin_overlay",
+    "textures": "guardedgalaxies:textures/models/tokon_pants.png",
+    "model_layers": "palladium:humanoid#suit",
+    "hide_second_layer": true,
+    "priority": 1
+}

@@ -1,0 +1,6 @@
+{
+    "parent": "minecraft:item/generated",
+    "textures": {
+        "layer0": "guardedgalaxies:item/star_lord_helmet_tokon"
+    }
+}

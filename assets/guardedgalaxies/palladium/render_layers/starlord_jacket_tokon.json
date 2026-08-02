@@ -1,0 +1,14 @@
+{
+    "type": "palladium:skin_overlay",
+    "render_type": "solid",
+    "texture": {
+        "normal": "guardedgalaxies:textures/models/tokon_jacket_wide.png",
+        "slim": "guardedgalaxies:textures/models/tokon_jacket_slim.png"
+    },
+    "model_layer": {
+        "normal": "palladium:humanoid#suit",
+        "slim": "palladium#humanoid#suit_slim"
+    },
+    "hide_second_layer": true,
+    "priority": 10
+}

@@ -1,0 +1,7 @@
+{
+    "type": "palladium:skin_overlay",
+    "render_type": "solid",
+    "texture": "guardedgalaxies:textures/models/tokon_boots.png",
+    "priority": 5,
+    "hide_second_layer": true
+}
