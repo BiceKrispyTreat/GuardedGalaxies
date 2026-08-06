@@ -109,7 +109,7 @@
                 "say Gotcha!"
             ],
             "last_tick_commands": [
-                "execute as @s superpower remove guardedgalaxies:constrained"
+                "superpower remove guardedgalaxies:constrained"
             ],
             "commands": [],
             "conditions": {
