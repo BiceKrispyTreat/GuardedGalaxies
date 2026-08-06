@@ -1,0 +1,13 @@
+{
+    "type": "palladium:skin_overlay",
+    "textures": {
+        "normal": "guardedgalaxies:textures/models/starlord_jacket_bice.png",
+        "slim": "guardedgalaxies:textures/models/starlord_jacket_bice_slim.png"
+    },
+    "model_layers": {
+        "normal": "palladium:humanoid#suit",
+        "slim": "palladium:humanoid#suit_slim"
+    },
+    "priority": 10,
+    "hide_second_layer": true
+}

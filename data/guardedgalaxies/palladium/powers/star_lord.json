@@ -243,12 +243,22 @@
                 ],
                 "unlocking": [
                             {
-                                "type": "palladium:item_in_slot",
+                        "type": "palladium:or",
+                        "conditions": [
+                                {"type": "palladium:item_in_slot",
                                 "item": {
                                     "item": "guardedgalaxies:starlord_jacket_tokon"
                                 },
                                 "slot": "chest"
+                            },
+                            {"type": "palladium:item_in_slot",
+                                "item": {
+                                    "item": "guardedgalaxies:starlord_jacket_bice"
+                                },
+                                "slot": "chest"
                             }
+                        ]
+                    }
                 ]
             }
         },
@@ -296,13 +306,26 @@
                                         }
                 ],
                 "unlocking": [
+                             
                     {
-                                "type": "palladium:item_in_slot",
+                        "type": "palladium:or",
+                        "conditions": [
+                                {"type": "palladium:item_in_slot",
                                 "item": {
                                     "item": "guardedgalaxies:starlord_jacket_tokon"
                                 },
                                 "slot": "chest"
+                            },
+                            {"type": "palladium:item_in_slot",
+                                "item": {
+                                    "item": "guardedgalaxies:starlord_jacket_bice"
+                                },
+                                "slot": "chest"
                             }
+                        ]
+                    }      
+                               
+                            
                 ]
             }
         }

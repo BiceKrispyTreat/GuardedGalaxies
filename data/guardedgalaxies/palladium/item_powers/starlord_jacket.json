@@ -1,7 +1,8 @@
 {
     "slot": "chest",
     "item": [
-        "guardedgalaxies:starlord_jacket_tokon"
+        "guardedgalaxies:starlord_jacket_tokon",
+        "guardedgalaxies:starlord_jacket_bice"
     ],
     "power": "guardedgalaxies:star_lord"
 }
