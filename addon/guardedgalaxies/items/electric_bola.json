@@ -1,0 +1,6 @@
+{
+  "parent": "guardedgalaxies:item/electric_bola",
+  "textures": {
+    "layer2": "guardedgalaxies:item/electric_bola"
+  }
+}

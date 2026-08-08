@@ -5,7 +5,7 @@
         "jacket": "guardedgalaxies:textures/models/tokon_boots_jacket.png"
     },
     "model_layers": {
-        "default": "palladium:humanoid#suit"
+        "default": "palladium:humanoid#tight_suit"
     },
     "conditions": [
         {

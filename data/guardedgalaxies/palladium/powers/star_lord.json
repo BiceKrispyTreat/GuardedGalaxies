@@ -202,7 +202,7 @@
         "throw_mine": {
             "type": "palladium:projectile",
             "icon": "minecraft:snowball",
-            "title": "null",
+            "title": "Gravity Mine",
             "bar_color": "light_gray",
             "hidden": false,
             "hidden_in_bar": false,
@@ -234,38 +234,17 @@
             "conditions": {
                 "enabling": [
                     {
-                        "type": "palladium:action",
-                        "cooldown": 0,
-                        "key_type": "key_bind",
-                        "needs_empty_hand": false,
-                        "allow_scrolling_when_crouching": true
+                        "type": "palladium:ability_wheel",
+                        "cooldown": 0
                     }
                 ],
-                "unlocking": [
-                            {
-                        "type": "palladium:or",
-                        "conditions": [
-                                {"type": "palladium:item_in_slot",
-                                "item": {
-                                    "item": "guardedgalaxies:starlord_jacket_tokon"
-                                },
-                                "slot": "chest"
-                            },
-                            {"type": "palladium:item_in_slot",
-                                "item": {
-                                    "item": "guardedgalaxies:starlord_jacket_bice"
-                                },
-                                "slot": "chest"
-                            }
-                        ]
-                    }
-                ]
+                "unlocking": []
             }
         },
         "electric_bola": {
             "type": "palladium:projectile",
             "icon": "minecraft:slime_ball",
-            "title": "null",
+            "title": "Electric Bola",
             "bar_color": "light_gray",
             "hidden": false,
             "hidden_in_bar": false,
@@ -276,11 +255,11 @@
             "entity_data": {
                 "Damage": 4,
                 "Gravity": 0.03,
-                "CommandOnEntityHit": "execute positioned ~ ~ ~ as @e[distance=..1.7] run superpower add guardedgalaxies:constrained",
+                "CommandOnEntityHit": "execute positioned ~ ~ ~ as @e[distance=..1] run superpower add guardedgalaxies:constrained",
                 "Appearances": [
                     {
                         "Type": "item",
-                        "Item": "minecraft:slime_ball"
+                        "Item": "guardedgalaxies:electric_bola"
                     },
                     {
                         "Type": "particles",
@@ -297,34 +276,86 @@
             "conditions": {
                 "enabling": [
                     {
-                        "type": "palladium:action",
-                        "cooldown": 30,
+                        "type": "palladium:ability_wheel",
+                        "cooldown": 30
+                    }
+                ],
+                "unlocking": []
+            }
+        },
+        "bola_sound": {
+            "type": "palladium:play_sound",
+            "icon": "minecraft:blaze_rod",
+            "title": "null",
+            "bar_color": "light_gray",
+            "hidden": true,
+            "hidden_in_bar": true,
+            "list_index": -1,
+            "gui_position": "null",
+            "description": "null",
+            "sound": "minecraft:ui.toast.out",
+            "volume": 1,
+            "pitch": 10,
+            "looping": false,
+            "play_self": false,
+            "play_others": false,
+            "conditions": {
+                "enabling": [
+                    {
+                        "type": "palladium:ability_enabled",
+                        "ability": "electric_bola"
+                    }
+                ],
+                "unlocking": []
+            }
+        },
+        "jacket_gadgets": {
+            "type": "palladium:ability_wheel",
+            "icon": "minecraft:blaze_rod",
+            "title": "Star-Lord's Gadgets",
+            "bar_color": "light_gray",
+            "hidden": false,
+            "hidden_in_bar": false,
+            "list_index": -1,
+            "gui_position": "null",
+            "description": "null",
+            "abilities": [
+                "throw_mine",
+                "electric_bola"
+            ],
+            "texture": "null",
+            "disable_mouse_scrolling": false,
+            "disable_center_icon": false,
+            "hide_locked": false,
+            "conditions": {
+                "enabling": [
+                    {
+                        "type": "palladium:held",
+                        "cooldown": 0,
                         "key_type": "key_bind",
-                        "needs_empty_hand": false,
-                        "allow_scrolling_when_crouching": true
+                        "needs_empty_hand": false
                     }
                 ],
                 "unlocking": [
-                             
                     {
                         "type": "palladium:or",
                         "conditions": [
-                                {"type": "palladium:item_in_slot",
+                            {
+                                "type": "palladium:item_in_slot",
                                 "item": {
                                     "item": "guardedgalaxies:starlord_jacket_tokon"
                                 },
                                 "slot": "chest"
                             },
-                            {"type": "palladium:item_in_slot",
+                            {
+                                "type": "palladium:item_in_slot",
                                 "item": {
                                     "item": "guardedgalaxies:starlord_jacket_bice"
                                 },
                                 "slot": "chest"
                             }
                         ]
-                    }      
-                               
-                            
+                    }
                 ]
             }
         }
