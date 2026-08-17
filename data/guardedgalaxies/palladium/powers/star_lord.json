@@ -20,6 +20,27 @@
                 "unlocking": []
             }
         },
+        "startup": {
+            "type": "palladium:command",
+            "icon": "minecraft:command_block",
+            "title": "null",
+            "bar_color": "light_gray",
+            "hidden": true,
+            "hidden_in_bar": true,
+            "list_index": -1,
+            "gui_position": "null",
+            "description": "null",
+            "first_tick_commands": [
+                "scoreboard objectives add Starlord.Gadgets dummy",
+                "scoreboard players set @s Starlord.Gadgets 1"
+            ],
+            "last_tick_commands": [],
+            "commands": [],
+            "conditions": {
+                "enabling": [],
+                "unlocking": []
+            }
+        },
         "jet_boot_flight": {
             "type": "palladium:attribute_modifier",
             "icon": "minecraft:iron_chestplate",
@@ -79,12 +100,12 @@
         },
         "hostile_scan": {
             "type": "palladium:entity_glow",
-            "icon": "minecraft:glow_berries",
+            "icon": "guardedgalaxies:textures/icons/hostile_scan.png",
             "title": "null",
             "bar_color": "light_gray",
             "hidden": false,
             "hidden_in_bar": false,
-            "list_index": -1,
+            "list_index": 0,
             "gui_position": "null",
             "description": "null",
             "mode": "others",
@@ -201,12 +222,12 @@
         },
         "throw_mine": {
             "type": "palladium:projectile",
-            "icon": "minecraft:snowball",
+            "icon": "guardedgalaxies:textures/icons/gravity_mine.png",
             "title": "Gravity Mine",
             "bar_color": "light_gray",
             "hidden": false,
             "hidden_in_bar": false,
-            "list_index": -1,
+            "list_index": 1,
             "gui_position": "null",
             "description": "null",
             "entity_type": "palladium:custom_projectile",
@@ -234,21 +255,36 @@
             "conditions": {
                 "enabling": [
                     {
-                        "type": "palladium:ability_wheel",
+                        "type": "palladium:action",
                         "cooldown": 0
                     }
                 ],
-                "unlocking": []
+                "unlocking": [
+                    {
+                        "type": "palladium:objective_score",
+                        "objective": "Starlord.Gadgets",
+                        "min_score": 1,
+                        "max_score": 1
+                    },
+                    {
+                        "type": "palladium:not",
+                        "conditions": [
+                            {
+                                "type": "palladium:crouching"
+                            }
+                        ]
+                    }
+                ]
             }
         },
         "electric_bola": {
             "type": "palladium:projectile",
-            "icon": "minecraft:slime_ball",
+            "icon": "guardedgalaxies:textures/icons/electric_bola.png",
             "title": "Electric Bola",
             "bar_color": "light_gray",
             "hidden": false,
             "hidden_in_bar": false,
-            "list_index": -1,
+            "list_index": 1,
             "gui_position": "null",
             "description": "null",
             "entity_type": "palladium:custom_projectile",
@@ -276,11 +312,26 @@
             "conditions": {
                 "enabling": [
                     {
-                        "type": "palladium:ability_wheel",
+                        "type": "palladium:action",
                         "cooldown": 30
                     }
                 ],
-                "unlocking": []
+                "unlocking": [
+                    {
+                        "type": "palladium:objective_score",
+                        "objective": "Starlord.Gadgets",
+                        "min_score": 2,
+                        "max_score": 2
+                    },
+                    {
+                        "type": "palladium:not",
+                        "conditions": [
+                            {
+                                "type": "palladium:crouching"
+                            }
+                        ]
+                    }
+                ]
             }
         },
         "bola_sound": {
@@ -309,19 +360,20 @@
                 "unlocking": []
             }
         },
-        "jacket_gadgets": {
+        "swap_gadget": {
             "type": "palladium:ability_wheel",
-            "icon": "minecraft:blaze_rod",
-            "title": "Star-Lord's Gadgets",
+            "icon": "guardedgalaxies:textures/icons/gadget_wheel.png",
+            "title": "null",
             "bar_color": "light_gray",
             "hidden": false,
             "hidden_in_bar": false,
-            "list_index": -1,
+            "list_index": 1,
             "gui_position": "null",
             "description": "null",
             "abilities": [
-                "throw_mine",
-                "electric_bola"
+                "mine_toggle",
+                "bola_toggle",
+                "enforcer_toggle"
             ],
             "texture": "null",
             "disable_mouse_scrolling": false,
@@ -338,25 +390,84 @@
                 ],
                 "unlocking": [
                     {
-                        "type": "palladium:or",
-                        "conditions": [
-                            {
-                                "type": "palladium:item_in_slot",
-                                "item": {
-                                    "item": "guardedgalaxies:starlord_jacket_tokon"
-                                },
-                                "slot": "chest"
-                            },
-                            {
-                                "type": "palladium:item_in_slot",
-                                "item": {
-                                    "item": "guardedgalaxies:starlord_jacket_bice"
-                                },
-                                "slot": "chest"
-                            }
-                        ]
+                        "type": "palladium:crouching"
                     }
                 ]
+            }
+        },
+        "mine_toggle": {
+            "type": "palladium:command",
+            "icon": "guardedgalaxies:textures/icons/gravity_mine.png",
+            "title": "Gravity Mine",
+            "bar_color": "light_gray",
+            "hidden": true,
+            "hidden_in_bar": true,
+            "list_index": -1,
+            "gui_position": "null",
+            "description": "null",
+            "first_tick_commands": [
+                "scoreboard players set @s Starlord.Gadgets 1"
+            ],
+            "last_tick_commands": [],
+            "commands": [],
+            "conditions": {
+                "enabling": [
+                    {
+                        "type": "palladium:ability_wheel",
+                        "cooldown": 0
+                    }
+                ],
+                "unlocking": []
+            }
+        },
+        "bola_toggle": {
+            "type": "palladium:command",
+            "icon": "guardedgalaxies:textures/icons/electric_bola.png",
+            "title": "Electric Bola",
+            "bar_color": "light_gray",
+            "hidden": true,
+            "hidden_in_bar": true,
+            "list_index": -1,
+            "gui_position": "null",
+            "description": "null",
+            "first_tick_commands": [
+                "scoreboard players set @s Starlord.Gadgets 2"
+            ],
+            "last_tick_commands": [],
+            "commands": [],
+            "conditions": {
+                "enabling": [
+                    {
+                        "type": "palladium:ability_wheel",
+                        "cooldown": 30
+                    }
+                ],
+                "unlocking": []
+            }
+        },
+        "enforcer_toggle": {
+            "type": "palladium:command",
+            "icon": "minecraft:dispenser",
+            "title": "Hadron Enforcer",
+            "bar_color": "light_gray",
+            "hidden": true,
+            "hidden_in_bar": true,
+            "list_index": -1,
+            "gui_position": "null",
+            "description": "null",
+            "first_tick_commands": [
+                "scoreboard players set @s Starlord.Gadgets 3"
+            ],
+            "last_tick_commands": [],
+            "commands": [],
+            "conditions": {
+                "enabling": [
+                    {
+                        "type": "palladium:ability_wheel",
+                        "cooldown": 0
+                    }
+                ],
+                "unlocking": []
             }
         }
     }
