@@ -1,0 +1,2 @@
+execute positioned ~ ~ ~ as @e[distance=..1] run superpower add guardedgalaxies:constrained
+execute positioned ~ ~ ~ run effect give @e[distance=..3,type=!minecraft:player] minecraft:slowness 10 100 true

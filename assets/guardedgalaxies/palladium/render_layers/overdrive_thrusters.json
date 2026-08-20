@@ -1,0 +1,8 @@
+{
+    "type": "palladium:thrusters",
+    "color": "#F09C1F",
+    "right_arm": false,
+    "left_arm": false,
+    "right_leg": true,
+    "left_leg": true
+}
