@@ -1,0 +1,10 @@
+{
+    "type": "palladium:skin_overlay",
+    "textures":  "guardedgalaxies:textures/models/starlord_pants_mcu.png",
+    "model_layers": {
+        "default": "palladium:humanoid#tight_suit"
+    },
+    "hide_second_layer": true,
+    "render_layers": "guardedgalaxies:starlord_pants_tokon",
+    "priority": 1
+}

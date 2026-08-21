@@ -1,0 +1,11 @@
+{
+    "type": "palladium:skin_overlay",
+    "textures": {
+        "default": "guardedgalaxies:textures/models/starlord_boots_rivals.png"
+    },
+    "model_layers": {
+        "default": "palladium:humanoid#tight_suit"
+    },
+    "priority": 5,
+    "hide_second_layer": true
+}

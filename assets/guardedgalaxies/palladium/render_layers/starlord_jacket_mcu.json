@@ -1,0 +1,14 @@
+{
+    "type": "palladium:skin_overlay",
+    "render_type": "solid",
+    "textures": {
+        "normal": "guardedgalaxies:textures/models/starlord_mcu_jacket_wide.png",
+        "slim": "guardedgalaxies:textures/models/starlord_jacket_mcu__slim.png"
+    },
+    "model_layer": {
+        "normal": "palladium:humanoid#suit",
+        "slim": "palladium#humanoid#suit_slim"
+    },
+    "hide_second_layer": true,
+    "priority": 10
+}

@@ -6,7 +6,7 @@
         "open_2": "guardedgalaxies:textures/models/tokon_equipmask_open_2.png",
         "open_3": "guardedgalaxies:textures/models/tokon_equipmask_open_3.png"
     },
-    "model_layers": "palladium:humanoid#suit",
+    "model_layers": "palladium:humanoid#tight_suit",
     "hide_second_layer": {
         "type": "palladium:openable_item_progress",
         "slot": "head",

@@ -1,0 +1,16 @@
+{
+    "type": "palladium:skin_overlay",
+    "textures": {
+        "default": "guardedgalaxies:textures/models/starlord_mcu_helmet.png",
+        "open_1": "guardedgalaxies:textures/models/starlord_mcu_helmet_open1.png",
+        "open_2": "guardedgalaxies:textures/models/starlord_mcu_helmet_open2.png",
+        "open_3": "guardedgalaxies:textures/models/starlord_mcu_helmet_open3.png"
+    },
+    "model_layers": "palladium:humanoid#tight_suit",
+    "hide_second_layer": {
+        "type": "palladium:openable_item_progress",
+        "slot": "head",
+        "min": 3,
+        "max": 0
+    }
+}

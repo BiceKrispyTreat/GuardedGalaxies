@@ -1,0 +1,11 @@
+{
+    "type": "palladium:armor",
+    "slot": "head",
+    "creative_mode_tab": "minecraft:combat",
+    "armor_material": "minecraft:diamond",
+    "openable": true,
+    "opening_time": 3,
+    "opening_sound": "minecraft:item.armor.equip_iron",
+    "closing_sound": "minecraft:item.armor.equip_iron",
+    "opening_toggle_sound": "minecraft:item.armor.equip_iron"
+}

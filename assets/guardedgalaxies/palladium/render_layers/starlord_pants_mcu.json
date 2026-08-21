@@ -1,0 +1,7 @@
+{
+    "type": "palladium:skin_overlay",
+    "render_type": "solid",
+    "texture": "guardedgalaxies:textures/models/starlord_pants_mcu.png",
+    "priority": 1,
+    "hide_second_layer": true
+}

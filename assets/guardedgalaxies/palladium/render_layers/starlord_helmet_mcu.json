@@ -1,0 +1,6 @@
+{
+    "type": "palladium:skin_overlay",
+    "render_type": "solid",
+    "texture": "guardedgalaxies:textures/models/starlord_helmet_mcu.png",
+    "hide_second_layer": true
+}

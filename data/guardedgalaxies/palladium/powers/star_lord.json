@@ -70,12 +70,33 @@
                 ],
                 "unlocking": [
                     {
-                        "type": "palladium:item_in_slot",
-                        "item": {
-                            "item": "guardedgalaxies:starlord_boots_tokon"
-                        },
-                        "slot": "feet"
+                        
+                        "type": "palladium:or",
+                        "conditions": [
+                            {
+                                "type": "palladium:item_in_slot",
+                                "item": {
+                                    "item": "guardedgalaxies:starlord_boots_tokon"
+                                },
+                                "slot": "feet"
+                            },
+                            {
+                                "type": "palladium:item_in_slot",
+                                "item": {
+                                    "item": "guardedgalaxies:starlord_boots_mcu"
+                                },
+                                "slot": "feet"
+                            },
+                            {
+                                "type": "palladium:item_in_slot",
+                                "item": {
+                                    "item": "guardedgalaxies:starlord_boots_rivals"
+                                },
+                                "slot": "feet"
+                            }
+                        ]
                     }
+                    
                 ]
             }
         },
@@ -302,7 +323,7 @@
             "entity_data": {
                 "Damage": 4,
                 "Gravity": 0.03,
-                "CommandOnEntityHit": "function guardedgalaxies:bola_hit",       
+                "CommandOnEntityHit": "function guardedgalaxies:bola_hit",
                 "Appearances": [
                     {
                         "Type": "item",
@@ -483,8 +504,8 @@
         },
         "overdrive": {
             "type": "palladium:attribute_modifier",
-            "icon": "minecraft:iron_chestplate",
-            "title": "null",
+            "icon": "guardedgalaxies:textures/icons/overdrive.png",
+            "title": "Overdrive",
             "bar_color": "light_gray",
             "hidden": false,
             "hidden_in_bar": false,
